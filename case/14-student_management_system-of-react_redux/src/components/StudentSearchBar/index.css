@@ -1,0 +1,25 @@
+.student-search_bar {
+    padding: 24px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.student-search_bar .row {
+    margin-right: 32px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.student-search_bar .row-txt {
+    margin-right: 12px;
+}
+
+.student-search_bar .row .txt {
+    letter-spacing: 1em;
+}
+
+.student-search_bar .row button {
+    width: 80px;
+}

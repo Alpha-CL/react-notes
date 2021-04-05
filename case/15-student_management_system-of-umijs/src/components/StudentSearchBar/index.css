@@ -1,0 +1,29 @@
+.search {
+    padding: 24px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.search .row {
+    margin-right: 32px;
+    display: flex;
+    flex-flow: row nowrap;
+    line-height: 20px;
+
+}
+
+.search .des {
+    margin-right: 12px;
+    line-height: 24px;
+}
+
+.search .row .txt {
+    letter-spacing: 1em;
+    line-height: 16px;
+}
+
+.search .row button {
+    width: 80px;
+}

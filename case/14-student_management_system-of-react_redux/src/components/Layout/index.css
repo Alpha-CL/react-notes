@@ -1,0 +1,91 @@
+:root,
+body {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: #fb7299;*/
+
+}
+
+.container .header {
+    flex: 0 0 80px;
+    background-color: #333;
+}
+
+.container .middle {
+    flex: auto;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.container .middle .aside,
+.container .middle .main {
+    overflow: hidden;
+}
+
+.container .middle .aside {
+    flex: 0 0 200px;
+    background-color: #555;
+}
+
+
+.container .middle .main {
+    padding: 24px;
+    flex: auto;
+    overflow: auto;
+}
+
+
+/*
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    height: 80px;
+    color: #fff;
+    background-color: #000;
+}
+
+.container .middle {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    left: 0;
+    top: 80px;
+    bottom: 0;
+}
+
+.container .middle .aside,
+.container .middle .main {
+    position: absolute;
+    overflow: hidden;
+}
+
+.container .middle .aside {
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: lightblue;
+}
+
+.container .middle .main {
+    left: 200px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #eee;
+}*/

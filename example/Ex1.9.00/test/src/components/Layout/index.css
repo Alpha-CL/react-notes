@@ -1,0 +1,24 @@
+.wrap,
+.content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.wrap {
+    flex-flow: column nowrap;
+}
+
+.content {
+    flex-flow: row nowrap;
+    overflow: hidden;
+}
+
+.content .main {
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 2px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}

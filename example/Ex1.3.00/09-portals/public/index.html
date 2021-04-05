@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+
+    #custom {
+        position: fixed;
+        margin-top: 10%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);
+    }
+
+    </style>
+
+</head>
+<body>
+
+
+<!-- 默认情况: react 默认将 虚拟DOM 树指向 root -->
+<div id="root"></div>
+
+<!-- portals( , target): reactDom; 可以改变默认指向 -->
+<div id="custom"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.container .top_nav {
+    display: flex;
+    flex-flow: row nowrap;
+    background: #333;
+}
+
+
+.container .top_nav a {
+    color: #fff;
+    display: block;
+    padding: 24px 32px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.container .top_nav a:hover {
+    background-color: #fff;
+    color: #333;
+    border-bottom: 1px solid #333;
+}
+
+.container .content {
+    padding: 32px;
+}
+

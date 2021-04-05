@@ -1,0 +1,42 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #eee;
+}
+
+.container .nav {
+    padding: 0 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #999;
+}
+
+.container .nav a {
+    padding: 18px 24px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.container .nav a.active {
+    color: #333 ;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.container .route-view {
+    margin: 18px 24px;
+}
+
+.container .route-view textarea {
+    padding: 12px;
+    width: 300px;
+    height: 200px;
+    box-sizing: border-box;
+}

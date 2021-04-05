@@ -1,0 +1,17 @@
+.section-login {
+    height: 400px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.section-login .row {
+    width: 240px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.section-login .row button {
+    width: 100%;
+}

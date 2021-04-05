@@ -1,0 +1,79 @@
+.container {
+    background-color: rgba(0, 0, 0, .07);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.container .nav {
+    padding: 0 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+}
+
+.container .nav > a {
+    height: 80px;
+    padding: 0 40px;
+    line-height: 80px;
+    text-decoration: none;
+    color: #999;
+}
+
+.container .nav > a:hover {
+    color: #fff;
+    background-color: #999;
+}
+
+.container .nav > a.active {
+    text-decoration: underline;
+    color: #282c34;
+}
+
+.container .sub-nav > a {
+    height: 50px;
+    padding: 0 40px;
+    line-height: 50px;
+}
+
+.container .route-view {
+    position: relative;
+    margin: 24px 16px;
+    padding: 12px 18px;
+    height: 100%;
+    border-radius: 6px;
+    /*box-sizing: border-box;*/
+    background-color: #fff;
+}
+
+.view-section {
+    position: absolute;
+    padding: 200px 0;
+    width: 500px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    box-sizing: border-box;
+}
+
+.view-section.home {
+    background-color: #3e86f4;
+}
+
+.view-section.news {
+    background-color: #42b983;
+}
+
+.view-section.personal {
+    background-color: #ff6600;
+}
+
+
+

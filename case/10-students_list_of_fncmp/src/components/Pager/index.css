@@ -1,0 +1,20 @@
+.item {
+    display: inline-block;
+    margin: 2px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: rgba(100, 200, 100, 1);
+    cursor: pointer;
+}
+
+.item.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.item.active {
+    border: none;
+    color: #f40;
+    cursor: auto;
+}

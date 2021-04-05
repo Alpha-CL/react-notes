@@ -1,0 +1,52 @@
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    border: 2px solid;
+}
+
+.container .top-nav {
+    padding: 32px;
+    display: flex;
+    flex-flow: row nowrap;
+    background: #333;
+    color: #fff;
+}
+
+.container .top-nav li {
+    margin-right: 32px;
+}
+
+.container .content {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.container .content-side {
+    padding: 32px 0 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 200px;
+    width: 10%;
+    text-align: center;
+    border-right: 2px solid;
+    box-sizing: border-box;
+}
+
+.container .content-side li {
+    margin-bottom: 24px;
+}
+
+
+.container .content .content-main {
+    padding: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+

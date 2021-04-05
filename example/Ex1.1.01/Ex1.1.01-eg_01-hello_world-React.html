@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello world</title>
+</head>
+<body>
+
+
+<div id="root-1"></div>
+
+<hr>
+
+<div id="root-2"></div>
+
+
+<!-- 引入react 核心库: 构建虚拟DOM -->
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+
+<!-- 依赖核心库，将核心功能与页面结合: 将虚拟DOM与页面结合 -->
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+<!-- 若使用 JSX 语法，则需要用该扩展转译-->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+
+<script>
+
+
+/**
+ * ReactDOM.render(element, container[, callback]);
+ *
+ *
+ * @content: 指定所创建的内容
+ * @target: 指定在何元素内创建
+ */
+
+ReactDOM.render('hello world', document.getElementById('root-1'));
+
+
+/**
+ * React.createElement(type: str, props: obj, ...children)
+ *
+ * @type: 指定标签类型
+ * @props: 指定标签属性
+ * @...children: 指定标签包含的子元素
+ */
+
+// React
+let span = React.createElement('span', {}, "这是span"),
+    h1 = React.createElement('h1', {
+        title: '这是一个属性'
+    }, span);
+
+// ReactDOM
+ReactDOM.render(h1, document.getElementById('root-2'));
+
+
+</script>
+
+</body>
+</html>
