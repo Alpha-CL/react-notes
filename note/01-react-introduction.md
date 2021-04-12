@@ -210,7 +210,7 @@ yarn create react-app [path/file-name]
 
 
 /**
- * 第三方脚手架: next.js, umijs
+ * 第三方脚手架: next.js, umijs ...
  * 
  * 
  * 

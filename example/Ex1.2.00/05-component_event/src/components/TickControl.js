@@ -68,7 +68,7 @@ class TickControl extends Component {
 
                     // 箭头函数自动绑定外层 this
                     onOver={() => {                                     // [ 箭头函数绑定 this Methods-1 ]
-                                                                        // 行内 自动绑定 this
+                        // 行内 自动绑定 this
                         this.setState({
                             isOver: true
                         });
@@ -77,7 +77,7 @@ class TickControl extends Component {
                     // 此时就会出现 this 指向 undefined
                     // onClick={this.handleClick}
                     onClick={this.handleClick.bind(this)}               // [ bind 绑定 this Methods-2 ]
-                                                                        // 行内通过 bind(); 绑定 this
+                    // 行内通过 bind(); 绑定 this
                 />
                 <h3>{tickStatus}</h3>
             </>
