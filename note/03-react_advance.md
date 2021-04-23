@@ -48,7 +48,6 @@ FnDefaultProps.defaultProps = {
 
 /** class_component-default_props **/
 
-
 class ClsDefaultProps extends Component {
 
     /** methods-2 **/
@@ -91,7 +90,7 @@ class ClsDefaultProps extends Component {
 
 #### propTypes
 
-``` javascript
+``` javascript7
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
