@@ -17,7 +17,7 @@ class Dom extends Component {
     }
 
 
-    handleClickFucus = () => {
+    handleClickFocus = () => {
 
 
         /** 原生调用 **/
@@ -28,6 +28,7 @@ class Dom extends Component {
 
         /**
          * ref          // 将元素标记，后可在 this.refs 中获取指定 "dom" 或 "自定义组件"
+         * React.createRef();
          *
          *
          * 使用场景: 1) 希望直接操作某个 reactDom 元素              // 返回 reactDom
@@ -67,7 +68,7 @@ class Dom extends Component {
                     ref="domRef"
                 />
                 <button
-                    onClick={this.handleClickFucus}
+                    onClick={this.handleClickFocus}
                 >聚焦
                 </button>
             </React.Fragment>

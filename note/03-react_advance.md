@@ -78,12 +78,14 @@ class ClsDefaultProps extends Component {
     }
 }
 
+
 /** methods-1 **/
 // ClsDefaultProps.defaultProps = {
 //     a: 1,
 //     b: 2,
 //     c: 3
 // };
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -108,6 +110,12 @@ yarn add prop-types
 //-------------------------------------------------------------------------------------------------------------------//
 
 
+若 null, undefined 作为 props 传递, 视为 没有传递( 未设置非空验证时 ) 
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
 class ClsPropTypes extends Component {
 
     /** 先混合 **/
@@ -117,32 +125,37 @@ class ClsPropTypes extends Component {
     };
 
     /** 再调用相应的函数进行验证 **/
-    static propTypes = {                        // 仅在 开发阶段报错提示，不会影响编译，仅作为提示
+    static propTypes = {                                    // 仅在 开发阶段报错提示，不会影响编译，仅作为提示
+
 
         /** isRequired: 必填项 **/
 
         /** basic_type **/
-        num: PropTypes.number,                  // 数字类型
-        str: PropTypes.string,                  // 字符串类型
-        bool: PropTypes.bool,                   // 布尔类型
+        num: PropTypes.number,                              // 数字类型
+        str: PropTypes.string,                              // 字符串类型
+        bool: PropTypes.bool,                               // 布尔类型
 
-        arr: PropTypes.array,                   // 数组类型
-        obj: PropTypes.object,                  // 对象类型
-        func: PropTypes.func,                   // 函数类型
-        symbol: PropTypes.symbol,               // 符号类型
+        arr: PropTypes.array,                               // 数组类型
+        obj: PropTypes.object,                              // 对象类型
+        func: PropTypes.func,                               // 函数类型
+        symbol: PropTypes.symbol,                           // 符号类型
 
-        any: PropTypes.any.isRequired,          // 任意类型
+        any: PropTypes.any.isRequired,                      // 任意类型
+
 
         /** advance_type **/
-        node: PropTypes.node,                   // 必须是一个可以渲染的内容: 字符串，数字，ReactElement
-        element: PropTypes.element,             // 必须是一个 ReactElement
-        elementType: PropTypes.elementType,     // 必须是一个 组件类型( 构造函数，函数 )
+        node: PropTypes.node,                               // 必须是一个可以渲染的内容: 字符串，数字，ReactElement
+        element: PropTypes.element,                         // 必须是一个 ReactElement
+        elementType: PropTypes.elementType,                 // 必须是一个 组件类型( 构造函数，函数 )
+
 
         // 约束 传入实例 原型链上必须有指定构造函数的原型
         son: PropTypes.instanceOf(Father),                  // 必须指定构造函数实例
 
+
         // 约束 传入值 必须来自指定数组的子项
         oneOf: PropTypes.oneOf(['male', 'female']),         // 枚举( 从一组值中取其中一个 )
+
 
         // 约束 array.item
         arrayOf: PropTypes.arrayOf(PropTypes.number),       // 指定该数组的每一子项的类型约束
@@ -151,6 +164,7 @@ class ClsPropTypes extends Component {
             PropTypes.number,
             PropTypes.bool
         ]),
+
 
         // 约束 object
         objShape: PropTypes.shape({                         // 指定对象中每一子项的类型约束
@@ -162,11 +176,13 @@ class ClsPropTypes extends Component {
             }),
         }),
 
+
         // 约束 array.obj
         arrObj: PropTypes.arrayOf(PropTypes.shape({
             name: PropTypes.string,
             age: PropTypes.number,
         })),
+
 
         object: PropTypes.objectOf(PropTypes.string),       // 指定该对象的每一子项的类型约束( 作用不大 )
 
@@ -198,7 +214,6 @@ class ClsPropTypes extends Component {
                 return new Error(`invalid prop ${propName} in ${componentName} must is between 0 and 100`);
             }
         },
-
     };
 
     constructor(props) {
@@ -251,12 +266,12 @@ class ClsPropTypes extends Component {
 
 
 /**
- * 利用 HOC 实现横切关注点
+ * 利用 HOC 实现横切关注点: 赋予组件更多的功能
  * 
  * 
- * 1) 禁止在 render(); 中使用 高阶组件
+ * 1) 禁止在 render(); 中使用 组件                // 可能会多次 创建和销毁该组件
  *
- * 2) 禁止在 高阶组件 内部修改 传入的组件           // 单一应用指责: 仅做包裹添加组件功能
+ * 2) 禁止在 高阶组件 内部修改 传入的组件           // 单一应用指责: 仅做包裹添加组件功能, 避免组件功能混乱
  */
 
 
@@ -267,7 +282,7 @@ eg: N 个组件，每个组件在创建和销毁时，需要做日志记录
 //-------------------------------------------------------------------------------------------------------------------//
 
 
-import RReact from "react";
+import React from "react";
 
 export default function withTest(comp) {
 
@@ -296,11 +311,69 @@ const B = withTest(A);
 
 
 /**
- * reference
- * 
- * 
- * 
+ * 谨慎使用 ref
+ *
+ *
+ * 1) 调用真实 DOM 对象中的方法时使用
+ *
+ * 2) 需要调用某个类组件中的方法时使用
  */
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+/**
+ * ref: React.createRef();              // obj.current: target
+ *
+ *
+ * 1) 赋值初期为 null
+ * 2) 当 render(); 执行时，进行赋值
+ */
+
+
+/**
+ * ref          // 将元素标记，后可在 this.refs 中获取指定 "dom" 或 "自定义组件"
+ * React.createRef();
+ *
+ *
+ * 使用场景: 1) 希望直接操作某个 reactDom 元素              // 返回 reactDom
+ *          2) 希望直接使用自定义组件中的某个方法            // 返回 自定义组件对象
+ *
+ *
+ * * 无法在函数组件上使用( 仅可在 真实的dom 和 自定义类组件 上使用 )
+ * * ref 不再推荐 赋值字符串，字符串赋值的方式将来可能会被移除
+ *
+ *
+ * * 建议赋值: ref: ( obj | fn );
+ */
+
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
+
+
+/**
+ * refFn            // 将赋值提取到 类中，而不是 在行内的 箭头函数，则不会执行多次
+ *
+ *
+ * 函数调用时间: 1) 在 componentDidMount 中即可以使用 该函数
+ *
+ *             2) 若 ref 值发生了改变( 旧函数被新的函数替代 )
+ *                则会分别调用 旧函数 及 新函数，触发在 componentDidUpdate 之前
+ *
+ *             3) 若 ref 所在的组件被卸载时，会调用该函数
+ */
+
+
+/**
+ * 函数的两次调用
+ *
+ *
+ * 1) 第一次: 旧函数被调用时，el: null
+ *
+ * 2）第二次: 新函数被调用时，el: obj
+ */
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -313,10 +386,12 @@ const B = withTest(A);
 
 
 /**
- * ref 转发
+ * forwardRef 转发            // 仅作用于 函数组件
+ *                           // 通常用于高阶组件
  * 
  * 
- * 
+ * 高阶组件, 通古包裹 函数组件 并传递 ref 后, 则可在 函数组件内 定义传递 ref 的指向
+ * 最终可以在外层 获得函数组件 自定义 ref 指向的内容
  */
 
 

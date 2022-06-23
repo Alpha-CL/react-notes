@@ -12,10 +12,10 @@ import React, {Component} from "react";
  *
  *
  * 创建一个组件上下文( context )
- * 该组件有一个 value 属性，可通过该属性设置 contex 数据值
+ * 该组件有一个 value 属性，可通过该属性设置 context 数据值
  *
- * * 避免创建相同数据的 Provider，而应考虑 提升 Provider 的使用层级
- * * 应将 Provder 提升至可供多个后代元素使用的层级
+ ** 避免创建相同数据的 Provider，而应考虑 提升 Provider 的使用层级
+ ** 应将 Provider 提升至可供多个后代元素使用的层级
  */
 
 
@@ -24,7 +24,9 @@ import React, {Component} from "react";
 
 /** New Context APi **/
 
-const ctx = React.createContext();
+const ctx = React.createContext({
+    foo: 'bar'
+});
 
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//

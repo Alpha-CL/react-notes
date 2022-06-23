@@ -12,20 +12,20 @@ import React, {Component} from "react";
  *
  *
  * 创建一个用于调用指定 上下文的对象( context )
- * 该组件 必须指定 targetContext.Comsumer
+ * 该组件 必须指定 targetContext.Consumer
  * 该组件的子节点是一个函数
  *
- * <targetContext.Comsumer>
+ * <targetContext.Consumer>
  *
  *     {(value)=>{              // value: ContextData
  *
  *         return (
  *
- *             <chidren/>
+ *             <children/>
  *         );
  *     }
  *
- * <targetContext.Comsumer/>
+ * <targetContext.Consumer/>
  */
 
 

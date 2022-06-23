@@ -19,7 +19,7 @@ import React, {Component} from "react";
  *
  *     Consumer:
  *
- *     Provider: 该组件会创建一个 Context               // Creater
+ *     Provider: 该组件会创建一个 Context               // Create
  * }
  */
 

@@ -23,7 +23,7 @@ import PropTypes from "prop-types";
  * create context_data
  *
  *
- * 1) 必须创建 staic childContextTypes 约束 context 中传入的数据类型
+ * 1) 必须创建 static childContextTypes 约束 context 中传入的数据类型
  * 2) 必须创建 getChildContext(): contextDataObj; 返回的 ContextData 必须满足之前创建的约束类型
  *    ( 该函数修改后会在 render 后运行 )
  */
@@ -113,7 +113,7 @@ class SubChild extends Component {
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 
-class SignleContext extends Component {
+class SingleContext extends Component {
 
     /** 约束 context 中的数据类型 **/
 
@@ -132,7 +132,8 @@ class SignleContext extends Component {
 
     /** 获取 context 中的数据 **/
 
-    getChildContext() {
+    getChildContext() {                 // 设置上下文的回调, 使用该组件时, 会在合适的时机( render() )调用该方法
+                                        // 以便后代组件中获取该上下文数据
 
         // console.log('[getChildContext]');
 
@@ -149,6 +150,8 @@ class SignleContext extends Component {
     }
 
     render() {
+
+        const context = this.getChildContext();
 
         return (
 
@@ -179,7 +182,7 @@ class SignleContext extends Component {
 
 export {
 
-    SignleContext
+    SingleContext
 };
 
 

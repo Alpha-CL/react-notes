@@ -768,11 +768,11 @@ React 在组件的声明周期中提供了一系列勾子函数( 类似与事件
 
 
 
-  /* 初始化阶段 */         /* 挂载阶段 */                  /* 更新阶段 */                 /* 销毁阶段 */
-                                                                      
-                                                                                
-    初始化阶段            组件即将挂载到页面             属性发生变化  状态发生变化           组件即将被销毁     
-  初始化属性和状态        componentWillMount
+  /* 初始化阶段 */         /* 挂载阶段 */                /* 更新阶段 */                   /* 销毁阶段 */
+
+
+    初始化阶段            组件即将挂载到页面             属性发生变化  状态发生变化            组件即将被销毁     
+  初始化属性和状态        componentWillMount                                          componentWillUnmount
    constructor                                     接收到新的属性值
                                                componentWillReceiveProps
 
@@ -789,7 +789,7 @@ React 在组件的声明周期中提供了一系列勾子函数( 类似与事件
                                
                                 
                                                  虚拟DOM已重新挂载到页面成为真实DOM
-                                                        componentDidUp
+                                                      componentDidUpdate
 
 
 
@@ -802,26 +802,34 @@ React 在组件的声明周期中提供了一系列勾子函数( 类似与事件
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    初始化阶段                挂载阶段                       更新阶段                       销毁阶段
+
+  /* 初始化阶段 */                  /* 挂载阶段 */              /* 更新阶段 */          /* 销毁阶段 */
+                                                                             
                                                                                 
     初始化阶段                          从属性中获取新的状态                              组件即将被销毁     
-  初始化属性和状态                  static getDerivedStateFormProps
+  初始化属性和状态                  static getDerivedStateFormProps                  componentWillUnmount
+
    constructor                                     
                                                  是否应该重新渲染组件，性能优化点
                                                     shouldComponentUpdate
                                                    true           false->end
 
+
                                           组件渲染虚拟DOM
                                              render
+
 
                          虚拟DOM已挂载到页面              获取更新前的快照
                             成为真实DOM              getSnapshotBeforeUpdate
                          componentDidMount              
+
                                                         组件渲染虚拟DOM
                                                            render
+
                                 
                                                  虚拟DOM已重新挂载到页面成为真实DOM
                                                         componentDidUp
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
