@@ -39,9 +39,9 @@ class ClsPropTypes extends Component {
         /** isRequired: 必填项 **/
 
         /** basic_type **/
-        num: PropTypes.number,                  // 数字类型
-        str: PropTypes.string,                  // 字符串类型
-        bool: PropTypes.bool,                   // 布尔类型
+        number: PropTypes.number,               // 数字类型
+        string: PropTypes.string,               // 字符串类型
+        boolean: PropTypes.bool,                // 布尔类型
 
         arr: PropTypes.array,                   // 数组类型
         obj: PropTypes.object,                  // 对象类型

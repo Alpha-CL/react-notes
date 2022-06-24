@@ -75,7 +75,7 @@ class MovabelPanel extends Component {
                         left: this.props.x - 50,
                         top: this.props.y - 50,
                     }}
-                ></div>
+                />
             </React.Fragment>
         );
     }

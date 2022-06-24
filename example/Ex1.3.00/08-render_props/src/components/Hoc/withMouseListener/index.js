@@ -42,6 +42,7 @@ function withMouseListener(Comp) {
                 y
             });
         };
+
         render() {
 
             return (
@@ -62,7 +63,6 @@ function withMouseListener(Comp) {
         }
     }
 }
-
 
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//

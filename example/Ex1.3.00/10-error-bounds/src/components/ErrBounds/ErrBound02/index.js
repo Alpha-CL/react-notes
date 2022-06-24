@@ -51,7 +51,7 @@ class ErrBound02 extends PureComponent {
      * componentDidCatch(error, errorInfo): void;               // 通常该函数用于记录错误信息
      *
      *
-     * @erroor: 错误信息
+     * @error: 错误信息
      * @errorInfo: 错误对象
      *
      * 运行时间: 渲染子组件过程中，发生错误，更新页面之后

@@ -4,7 +4,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import {SetState_Async} from "./components/SetState_Async";
-import {SetState_Synch} from "./components/SetState_Synch";
+import {SetState_Sync} from "./components/SetState_Sync";
 import {SetState_CallBack} from "./components/SetState_CallBack";
 import {SetState_Multi_01} from "./components/SetState_Multi_01";
 import {SetState_Multi_02} from "./components/SetState_Multi_02";
@@ -32,7 +32,6 @@ import {SetState_Multi_03} from "./components/SetState_Multi_03";
  */
 
 
-
 //-------------------------------------------------------------------------------------------------------------------//
 
 
@@ -45,8 +44,8 @@ ReactDOM.render(
             <h3>SetState_Async</h3>
             <SetState_Async/>
             <hr/>
-            <h3>SetState_Synch</h3>
-            <SetState_Synch/>
+            <h3>SetState_Sync</h3>
+            <SetState_Sync/>
             <hr/>
             <h3>SetState_CallBack</h3>
             <SetState_CallBack/>

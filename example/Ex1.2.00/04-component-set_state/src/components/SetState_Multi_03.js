@@ -33,7 +33,7 @@ class SetState_Multi_03 extends Component {
 
             /**
              * @cur: 表示当前状态
-             * 该函数的返回结果，会混合(覆盖)之前的结果
+             * 该函数的返回结果，会混合(覆盖)之前 state 的结果
              * 该函数是异步执行的
              *
              * * React 会对 "异步setState();" 优化，将多次 setState(); 进行合并

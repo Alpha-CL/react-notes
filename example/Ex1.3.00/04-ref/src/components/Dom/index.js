@@ -52,8 +52,7 @@ class Dom extends Component {
          * 2) 需要调用某个类组件中的方法时使用
          */
 
-        // console.log(this.refs);
-
+        console.log(this.refs);
 
         this.refs.domRef.focus();
     };
@@ -66,7 +65,7 @@ class Dom extends Component {
                 <input
                     type="text"
                     ref="domRef"
-                />
+                />&nbsp;&nbsp;
                 <button
                     onClick={this.handleClickFocus}
                 >聚焦

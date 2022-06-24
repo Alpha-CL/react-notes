@@ -8,14 +8,14 @@ import React, {Component} from "react";
 
 
 export {
-    SetState_Synch
+    SetState_Sync
 }
 
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 
-class SetState_Synch extends Component {
+class SetState_Sync extends Component {
 
     constructor(props) {
 

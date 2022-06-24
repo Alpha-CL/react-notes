@@ -20,7 +20,8 @@ class ClsComp extends Component {
 
     handleClick = () => {
 
-        console.log(this.refs.customRef.innerHTML);
+        console.log("customRef: ", this.refs.customRef);
+        console.log("customRef.innerHTML: ", this.refs.customRef.innerHTML);
     };
 
     render() {

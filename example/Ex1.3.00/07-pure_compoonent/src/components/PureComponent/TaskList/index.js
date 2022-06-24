@@ -29,13 +29,13 @@ class TaskList extends PureComponent {
 
     createDomTasks() {
 
-        return this.props.tasks.map((item, idx) => {
+        return this.props.tasks.map((item, i) => {
 
             return (
 
                 <PureTask
                     {...item}
-                    key={idx}
+                    key={i}
                 />
             );
         });
@@ -53,7 +53,6 @@ class TaskList extends PureComponent {
                 <ul>
                     {domTasks}
                 </ul>
-
             </React.Fragment>
         );
     }

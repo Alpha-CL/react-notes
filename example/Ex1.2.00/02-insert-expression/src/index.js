@@ -128,7 +128,7 @@ const arr1 = [1, 2, 3, 4, 5, 6, null, false, undefined];
 
 const arrExpression = (
     <div>
-        {arr1}( null, false, undefined 作为数组子项依然不会被显示出来 )
+        {arr1} ( null, false, undefined 作为数组子项依然不会被显示出来 )
         <hr/>
     </div>
 );
@@ -144,7 +144,6 @@ const numbers = new Array(6);
 numbers.fill(0);
 
 const lis = numbers.map((val, idx, arr) => {
-
     return (
         <li key={idx}>{idx}</li>
     );
@@ -159,6 +158,7 @@ const ulDom = React.createElement(
 const ulExpress = React.createElement(
     'div',
     {},
+    '元素嵌入表达式',
     ulDom,
     <hr/>
 );
@@ -178,6 +178,7 @@ const url = 'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&qual
     },
     camelCasePropName = (
         <div>
+            <h2>性使用小驼峰命名</h2>
             <img
                 src={url}                       // 属性值不需要使用 双引号
                 className={cls}                 // 和 html 的 class 冲突，所以使用 className
@@ -199,6 +200,7 @@ const content = "<h1>just do it<br/><span>hello world</span></h1>";
 
 const autoCoding = (
     <div>
+        <h2>防止注入攻击-自动编码( 为了防止代码来自用户的代码攻击，react 非常保守的将数据仅作为字符串处理 ) </h2>
         {content}
         <hr/>
     </div>
@@ -213,6 +215,7 @@ const autoCoding = (
 
 const setInnerHTML = (
     <React.Fragment>
+        <h2>防止注入攻击-dangerouslySetInnerHTML( 有切仅当数据需要当作 html 被解析时，使用该处理方式 )</h2>
         <div
             dangerouslySetInnerHTML={{
                 __html: content

@@ -53,16 +53,16 @@ class CustomIndex extends PureComponent {
          * ReactDom.createPortal(child, container): reactDom;           // 将 JSX 渲染到指定真实 DOM 中
          *                                                              // 渲染后 虚拟dom 结构不变，仅改变 真实dom结构
          *
-         * @chidl: JSX
-         * @container: 指定真实 Dom 容器
+         * @child:      JSX
+         * @container:  指定真实 Dom 容器
          *
          * return: reactDom
          *
          *
          ** 事件冒泡
          **
-         ** 1) React 中事件是包装过的( 事件参数 event 也被包装过 )
-         ** 2) React 中事件冒泡是依据 React_virtual_Dom( 与 Realy_Dom 无关 )
+         ** 1) React 中事件是包装过的 ( 事件参数 event 也被包装过 )
+         ** 2) React 中事件冒泡是依据 虚拟DOM结构 ( 与 真实DOM结构 无关 )
          */
 
 

@@ -11,10 +11,10 @@ import {ObjectEqual} from "../../../utils/helper";
 
 
 /**
- * PureComponent extends Component              // 纯组件: 用于避免不必要的渲染( 判断是否要重新渲染 render(); )
+ * PureComponent extends Component                // 纯组件: 用于避免不必要的渲染( 判断是否要重新渲染 render(); )
  *
  *
- * PureComponent 是一个组件，若组件继承自该组件，则该组件的 shouldComponentUpdata 会进行优化
+ * PureComponent 是一个组件，若组件继承自该组件，则该组件的 shouldComponentUpdate 会进行优化
  *
  ** 若一个组件的属性和状态，都没有发生变化，则没有必要重新渲染该组件
  */
@@ -23,12 +23,15 @@ import {ObjectEqual} from "../../../utils/helper";
  * 注意事项
  *
  *
- * 1) PureCompoent 是 "浅比较"
- *     - 为了效率，应尽量使用 PureComponent
- *     - Immutable: 不可变的对象，永远创建新的状态覆盖之前的状态，不要改动之前的状态( 引用地址相同，有时会造成无法浅比较对象是否改变了 )
- *     - Immutable.js: 用于制作不可变对象
+ * 1) PureComponent 是 "浅比较"( 节省效率 )
+ *
+ *     - Immutable:         不可变的对象，永远创建新的状态覆盖之前的状态，不要改动之前的状态
+ *                          ( 引用地址相同，有时会造成浅比较对象地址相同则会被优化, 则会导致被优化无法重新渲染 )
+ *
+ *     - Immutable.js:      用于制作不可变对象
  *
  * 2) 函数组件使用 HOC => React.memo(Comp);
+ *
  *     - React 提供的高阶组件，用于解决函数组件浅比较优化问题
  */
 
@@ -47,7 +50,6 @@ import {ObjectEqual} from "../../../utils/helper";
 //
 //        return true;
 //    }
-//
 //
 //    shouldComponentUpdate(nextProps, nextState, nextContext) {
 //
