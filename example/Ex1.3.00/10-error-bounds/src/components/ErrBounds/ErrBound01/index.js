@@ -24,7 +24,7 @@ class ErrBound01 extends PureComponent {
 
     static getDerivedStateFromError(err) {
 
-        // console.error('[errored]', err);
+        console.error('[errored]', err);
 
         return {
 

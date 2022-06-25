@@ -660,7 +660,7 @@ ReactDom.createPortal(contentElement, containerElement);
 
 ## render principle
 
-#### 
+#### base
 
 ``` javascript
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -682,8 +682,13 @@ ReactDom.createPortal(contentElement, containerElement);
  * React Element                // React 元素 
  * 
  *  
- * 通过 "React.createElement();" || "JSX" 创建的 ReactDomObj 
+ 
  */
+
+
+- 通过 "React.createElement();" 
+
+- "JSX" 创建的 ReactDomObj 再通过 babel 编辑后使用 "React.createElement();" 创建的元素
 
 
 //-------------------------------------------------------------------------------------------------------------------//
@@ -696,18 +701,19 @@ ReactDom.createPortal(contentElement, containerElement);
  * 专门用于渲染到 UI界面 的对象
  */
 
-- ReactDomComponent( React Dom节点 ): 创建该节点的 React元素类型 是 一个字符串
 
-- ReactComposite( React 混合节点 ): 创建该节点的 React元素类型是 一个函数 或 一个类
+- ReactDomComponent     ( React Dom节点 ):     创建该节点的 React元素类型 是 一个字符串
 
-- ReactTextNode( React 文本节点 ): 创建该节点的 React元素由字符串创建 
+- ReactComposite        ( React 混合节点 ):     创建该节点的 React元素类型是 一个函数 或 一个类
 
-- ReactEmptyNode( React 空节点 ): 创建该节点的 React元素 由 null, undefined, fasle, true 
+- ReactTextNode         ( React 文本节点 ):     创建该节点的 React元素由字符串创建 
 
-- ReactArrayNode( React 数组节点 ): 创建该节点的 React元素 由一个数组
+- ReactEmptyNode        ( React 空节点 ):       创建该节点的 React元素 由 null, undefined, fasle, true 
+
+- ReactArrayNode        ( React 数组节点 ):     创建该节点的 React元素 由一个数组
 
 
-//-------------------------------------------------------------------------------------------------------------------//
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
 
 /**
@@ -727,7 +733,7 @@ ReactDom.createPortal(contentElement, containerElement);
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ```
 
-#### 
+#### React First Render
 
 ``` javascript
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

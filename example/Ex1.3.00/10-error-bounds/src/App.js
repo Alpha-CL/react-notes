@@ -9,7 +9,6 @@ import {Error02} from "./components/Error02";
 import {Error03} from "./components/Error03";
 
 
-
 //-------------------------------------------------------------------------------------------------------------------//
 
 
@@ -19,9 +18,7 @@ class App extends PureComponent {
 
         super(props);
 
-        this.state = {
-
-        };
+        this.state = {};
     }
 
     render() {
@@ -29,15 +26,19 @@ class App extends PureComponent {
         return (
 
             <React.Fragment>
+
                 <ErrBound01>
                     <Error01/>
                 </ErrBound01>
+
                 <ErrBound02>
                     <Error02/>
                 </ErrBound02>
+
                 <ErrBound02>
                     <Error03/>
                 </ErrBound02>
+
             </React.Fragment>
         );
     }
