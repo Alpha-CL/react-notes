@@ -589,7 +589,7 @@ const B = withTest(A);
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ```
 
-## 
+## PureComponent
 
 #### PureComponent
 
@@ -677,7 +677,6 @@ ReactDom.createPortal(contentElement, containerElement);
 //-------------------------------------------------------------------------------------------------------------------//
 
 
-
 /**
  * React Element                // React 元素 
  * 
@@ -733,7 +732,7 @@ ReactDom.createPortal(contentElement, containerElement);
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ```
 
-#### React First Render
+#### React Node Render
 
 ``` javascript
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -762,10 +761,10 @@ ReactDom.createPortal(contentElement, containerElement);
                
     - componentNode:
         
-        - functionComponent: 调用函数( 该函数必须防护UI一个可以生成节点的内容 )，
+        - functionComponent: 调用函数( 该函数必须返回一个可以生成节点的内容 )，
                              将该函数的返回结果递归生成节点( 回至 第1步，直至递归遍历结束 )
         
-        - classComponent: 1. 创建该类组件的实例对象
+        - classComponent: 1. 创建该类组件的实例对象 constructor();
                           2. 调用该实例对象的声明周期函数: static getDerivedSStateFromProps();
                           3. 运行该实例对象的 render(); 获取节点对象( 回至 第1步，直至递归遍历结束 )
                           
@@ -782,6 +781,7 @@ ReactDom.createPortal(contentElement, containerElement);
 
 /** Update Node **/
 
+
 1) ReactDOM.render();               // 触发根节点更新
 
 2) ClassCmp.setDate();              // 实例所在的节点及其后代节点更新
@@ -797,7 +797,7 @@ ReactDom.createPortal(contentElement, containerElement);
 
 /** ClassCmp.setDate(); **/
 
-1) 运行生命周期函数 statoc getDerovedStateFromProps();
+1) 运行生命周期函数 static getDerovedStateFromProps();
 
 2) 运行生命周期函数 shouldComponentUpdate(); 若该函数返回 false，则终止当前更新
 
@@ -819,7 +819,6 @@ ReactDom.createPortal(contentElement, containerElement);
 3) 依次调用执行队列中的 componentDidUpdate();
 
 
-
 /** diff 对比更新 **/
 
 将产生的新节点，对比之前 虚拟DOM树的节点，发现差异，完成更新
@@ -839,21 +838,16 @@ ReactDom.createPortal(contentElement, containerElement);
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ```
 
-##
-
-#### 
-
-``` javascript
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-/**
- * 
- * 
- * 
- * 
- */
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-```
+
+
+
+
+
+
+
+
+

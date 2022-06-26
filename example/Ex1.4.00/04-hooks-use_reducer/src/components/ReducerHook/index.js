@@ -29,7 +29,7 @@ import PropTypes from "prop-types";
  *      - payload: 动作触发后的附加信息       // 任意类型
  *
  *
- ** 4) 必须通过 renducer(state, action): changedData; 才可以间接改变数据         // 必须是纯函数，禁止有任何副作用
+ ** 4) 必须通过 reducer(state, action): changedData; 才可以间接改变数据         // 必须是纯函数，禁止有任何副作用
  *
  *      - state: 表示当前数据仓库中的数据
  *
@@ -39,7 +39,7 @@ import PropTypes from "prop-types";
  *        ( Flux 要求，对象是不可变的，若返回对象，必须创建新对象 )
  *
  *
- ** 5) 若要触发 rendcer(); 必须使用 dispatch(action); 间接调用
+ ** 5) 若要触发 reducer(); 必须使用 dispatch(action); 间接调用
  *     ( 该函数会间接调用 reducer，以达到改变数据的目的 )
  */
 

@@ -30,8 +30,8 @@ class App extends PureComponent {
         return (
 
             <React.Fragment>
-                {/*<TestUseEffectOfReturn/>*/}
-                {/*<hr/>*/}
+                <TestUseEffectOfReturn/>
+                <hr/>
                 {/*<TestUseEffectOfSecondParam/>*/}
                 {/*<hr/>*/}
                 {/*<TestUseEffectExecutionTimeline/>*/}
@@ -39,8 +39,8 @@ class App extends PureComponent {
                 {/*<TestUseEffectOfFuncClosure/>*/}
                 {/*<hr/>*/}
                 {/*<TestUseEffectOfTimer/>*/}
-                <TestUseEffectOfUnstableFnParam/>
-                <hr/>
+                {/*<TestUseEffectOfUnstableFnParam/>*/}
+                {/*<hr/>*/}
                 {/*<hr/>*/}
                 {/*<UseEffect/>*/}
                 {/*<hr/>*/}

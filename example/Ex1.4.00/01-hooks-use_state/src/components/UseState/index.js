@@ -17,7 +17,7 @@ import "./index.css";
  *
  * 1) 第 1 次调用 useState(defVal);
  *
- * 2) 检查该节点的 stateTabl 是否为空
+ * 2) 检查该节点的 stateTable 是否为空
  *
  *      - empty:
  *
@@ -69,7 +69,7 @@ import "./index.css";
  *
  ** 6) 强制重新渲染组件
  *
- **    - fnComp: 利用 const [, forceUpdate] = useState({});
+ **    - fnComp: 利用 const [state, forceUpdate] = useState({});
  *       ( 利用 forceUpdate({}); 实现强制刷新 )
  *       ( 原理 Object.is(oldObj, newObj); 两次传入的虽然都是空对象，但是对象的引用地址不同 )
  *
@@ -103,7 +103,7 @@ function UseState(props) {
      * return: stateArr;
      */
 
-        // const stateArr = useState(0),           // 设置 sttate 的默认值，并接收 状态数组
+        // const stateArr = useState(0),           // 设置 state 的默认值，并接收 状态数组
         //     prevState = stateArr[0],            // 获取状态的上一次的值
         //     setState = stateArr[1];             // 获取一个可以改变状态的函数
 
