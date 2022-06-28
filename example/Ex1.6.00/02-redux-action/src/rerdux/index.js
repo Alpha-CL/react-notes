@@ -75,7 +75,7 @@ console.log('[getState]: ', store.getState());
  *      3) 不可以对外部环境中的数据造成影响
  *
  * 5) bindActionCreators(actionsObjOfChildFn, store.dispatch): boundActions;
- *      - @actionsObjOfChildFn: 一个包含多个 acntionFn() 的对象
+ *      - @actionsObjOfChildFn: 一个包含多个 actionFn() 的对象
  *      - @store.dispatch: 用于绑定的 store.dispatch
  *      -
  *      - boundActions: 将传入的 actionObjOfChildFn 中的 ActionFn(); 绑定指定的 store.dispatch

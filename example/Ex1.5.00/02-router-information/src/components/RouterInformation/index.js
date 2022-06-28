@@ -38,9 +38,9 @@ import qs from "query-string";
  * 为什么没有直接使用 window.History
  *
  *
- ** 1) React-Ruouter 有两种模式( hash，history )，window.history 仅支持一种模式
+ ** 1) React-Router 有两种模式( hash，history )，window.history 仅支持一种模式
  *
- ** 2) 若直接使用 window.histoty.method，则 React 无法监测 history_stack 中的改变，导致无法实时更改相应路径信息重绘页面
+ ** 2) 若直接使用 window.history.method，则 React 无法监测 history_stack 中的改变，导致无法实时更改相应路径信息重绘页面
  */
 
 
@@ -260,7 +260,7 @@ function RouterInformation(props) {
                 <Route path="/b" component={B}/>
 
                 /* string-pattern: 约定路径中指定位置的匹配规则 */
-                <Route path="/news/:year/:mounth/:day" component={News}/>
+                <Route path="/news/:year/:month/:day" component={News}/>
 
                 /* 非 Route 匹配的组件无法获取 route_context_info */
                 <Route path="/parent" component={Parent}/>

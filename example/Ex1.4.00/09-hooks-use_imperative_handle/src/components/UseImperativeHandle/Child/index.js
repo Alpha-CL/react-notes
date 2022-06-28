@@ -42,12 +42,12 @@ function Child(props, ref) {
     );
 }
 
+
 const ChildWrapper = React.forwardRef(Child);
 
 
 
 function UnUseImperativeHandleChild(props, ref) {
-
 
     /** 未使用 useImperativeHandle 时，仅可控制 dom **/
 
@@ -57,7 +57,6 @@ function UnUseImperativeHandleChild(props, ref) {
             <p ref={ref}>Child Component</p>
         </React.Fragment>
     );
-
 }
 
 

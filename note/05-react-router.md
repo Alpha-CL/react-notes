@@ -59,7 +59,7 @@ single_page_app   single_page_app   single_page_app
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ```
 
-## (Hash & Brower History) Router
+## (Hash & Browser History) Router
 
 #### URL Config Introduction
 
@@ -155,7 +155,7 @@ window.location
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ```
 
-#### Brower History Router
+#### Browser History Router
 
 > HTML5 新增 API( 使浏览器拥有了 "改变 页面路径，却不刷新页面的 方式" )
 
@@ -171,10 +171,11 @@ window.location
  * [schema] : // [host] : [port] [/path] [?query] [#hash]
  * 
  * 
+ ** 历时记录栈仅针对当前页面, 若刷新则会创建一个新的历史记录栈 
  */
 
-window.history
 
+window.history
 
 
                   History Stack
@@ -194,6 +195,7 @@ window.history
                 + ------------- +
                     
                 first in, last out
+
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
 
