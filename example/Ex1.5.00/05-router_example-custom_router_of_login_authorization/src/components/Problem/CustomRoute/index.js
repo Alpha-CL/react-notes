@@ -8,9 +8,15 @@ import {isLogin, login, loginOut} from "../loginInfo";
 //-------------------------------------------------------------------------------------------------------------------//
 
 
-function ProtectedRoute({component: Comp, children, render, ...rest}) {
+function ProtectedRoute(props) {
+
+    console.log('props: ', props);
+
+    const {component: Comp, children, render, ...rest} = props;
 
     const handleRender = (context) => {
+
+        console.log('context: ', context);
 
         if (isLogin) {
 
@@ -23,7 +29,7 @@ function ProtectedRoute({component: Comp, children, render, ...rest}) {
             /** methods_01( 会显示在地址栏中 ): 将所需要传递的 地址参数 在 url 的 search 字段中传递 **/
             // return <Redirect to={{
             //     pathname: '/login',
-            //     search: '?returnurl=' + context.location.pathname
+            //     search: '?returnUrl=' + context.location.pathname
             // }}/>;
 
             /** methods_02( 不会显示在地址栏中 ): 将所需要传递的 地址参数 在 state 中传递 **/

@@ -3,7 +3,7 @@
 
 import React,{useState,useEffect,useReducer,useContext,useCallback,useMemo,useRef,useImperativeHandle,useLayoutEffect,useDebugValue} from "react";
 import PropTypes from "prop-types";
-import {BrowserRouter,Switch,Route,withRouter} from "react-router-dom";
+import {BrowserRouter, Switch, Route, withRouter} from "react-router-dom";
 import qs from "query-string";
 
 
@@ -101,21 +101,19 @@ import qs from "query-string";
  *
  **         // string-pattern: 约定路径中指定位置的匹配规则
  *          //
- *          // <Route path="/demo/:year/:mounth/:day">
- *          // <Route path="/demo/:year(\d+)/:mounth/:day">         // 可根据正则匹配
- *          // <Route path="/demo/:year/:mounth/:day/*">            // * 任意字符
- *          // <Route path="/demo/:year?/:mounth?/:day?">           // ? 可选的
- *          // <Route path="/demo-:year-:mounth-:day">              // 不限制匹配字符
+ *          // <Route path="/demo/:year/:month/:day">
+ *          // <Route path="/demo/:year(\d+)/:month/:day">          // 可根据正则匹配
+ *          // <Route path="/demo/:year/:month/:day/*">             // * 任意字符
+ *          // <Route path="/demo/:year?/:month?/:day?">            // ? 可选的
+ *          // <Route path="/demo-:year-:month-:day">               // 不限制匹配字符
  *     },
  *
  *
- *     path: "news/:year/:mounth/:day/*",                // 路径匹配规则
- *     url: "new/2020/2/2",                              // 真实路径值
+ *     path: "news/:year/:month/:day/*",                    // 路径匹配规则
+ *     url: "new/2020/2/2",                                 // 真实路径值
  *
  *     ...
  * }
- *
- *
  */
 
 
@@ -196,7 +194,7 @@ function B(props) {
             <h1>CompB</h1>
             <button
                 onClick={()=>{
-                    props.history.push("/a");
+                    props.history.push("/a", { foo: "bar"});
                 }}
             >Jump CompA</button>
         </React.Fragment>
@@ -211,7 +209,7 @@ function News(props) {
             <div>
                 props.match.params:
                 {props.match.params.year}年
-                {props.match.params.mounth}月
+                {props.match.params.month}月
                 {props.match.params.day}日
             </div>
         </React.Fragment>

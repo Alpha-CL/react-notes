@@ -7,14 +7,13 @@
 
 
 const urlConfig = {
-
     user: {
         root: '/user',
         update: '/update',
         pay: {
             root: '/pay',
-            beforepay: '/before',
-            afterpay: '/after'
+            beforePay: '/before',
+            afterPay: '/after'
         }
     }
 };

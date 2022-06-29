@@ -24,13 +24,11 @@ import qs from "query-string";
  *          return <ReactDom/>
  *      }
  *
- **     childrem={()=>{         // 无论是否匹配成功，都运行返回值渲染你
+ **     children={()=>{         // 无论是否匹配成功，都运行返回值渲染你
  *
  *          return <ReactDom/>
  *      }
  * />
- *
- *
  */
 
 
@@ -87,6 +85,8 @@ function TopNav(props) {
 
 function Home(props) {
 
+    console.log(props);
+
     return (
 
         <React.Fragment>
@@ -97,7 +97,7 @@ function Home(props) {
                     <h1>Home_Page</h1>
                 </div>
                 <div className="page=con">
-                    <p></p>
+                    <p>hello world</p>
                 </div>
             </div>
         </React.Fragment>
@@ -113,9 +113,9 @@ function Login(props) {
 
         // const query = qs.parse(props.location.search);
         //
-        // if (query.returnurl) {
+        // if (query.returnUrl) {
         //
-        //     props.history.push(query.returnurl);
+        //     props.history.push(query.returnUrl);
         //
         // } else {
         //
@@ -141,17 +141,15 @@ function Login(props) {
     return (
 
         <React.Fragment>
-            <div
-                className="page"
-            >
+            <div className="page">
                 <div className="page-hd">
                     <h1>Login_Page</h1>
                 </div>
-                <div className="page=con">
+                <div className="page-con">
                     <p>该页面仅做测试，点击下方按钮即可登陆</p>
                     <button
                         onClick={handleLogin}
-                    >Login</button>
+                    >Login</button>&nbsp;&nbsp;
                     <button
                         onClick={handleLoginOut}
                     >LoginOut</button>
@@ -172,7 +170,7 @@ function Personal(props) {
                 <div className="page-hd">
                     <h1>Personal_Page</h1>
                 </div>
-                <div className="page=con">
+                <div className="page-con">
                     <p>若看到该页面，则表示已登陆</p>
                 </div>
             </div>

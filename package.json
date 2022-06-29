@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Alpha-CL/react-notes/issues"
   },
-  "homepage": "https://github.com/Alpha-CL/react-notes#readme"
+  "homepage": "https://github.com/Alpha-CL/react-notes#readme",
+  "dependencies": {
+    "react-router-dom": "^6.3.0"
+  }
 }

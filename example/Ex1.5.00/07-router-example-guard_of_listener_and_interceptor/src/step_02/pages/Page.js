@@ -31,7 +31,7 @@ function Page(props) {
 
         <React.Fragment>
             <RouteGuard
-                routeGuardListener={handlerouteGuardListener}
+                routeGuardListener={handleRouteGuardListener}
                 onBeforeChange={handleOnBeforeChange}
             >
                 <div className="container">
@@ -52,7 +52,7 @@ function Page(props) {
 
 let count = 0;
 
-const handlerouteGuardListener = (prevLocation, location, action, unListen) => {
+const handleRouteGuardListener = (prevLocation, location, action, unListen) => {
 
     count++;
 
@@ -66,14 +66,14 @@ const handleOnBeforeChange = (prevLocation, location, action, commit, unBlock) =
 
     // console.log(`日志记录: 页面从 [${prevLocation.pathname}] 跳转至 [${location.pathname}]，跳转方式为 ${action}`);
 
-    commit(true);           // 是否允许跳转
+    commit(true);               // 是否允许跳转
 
-    // unBlock();              // 清除拦截器
+    // unBlock();               // 清除拦截器
 };
 
 
 // /** 仅当设置 this.props.history.block(msg); 后才会触发该勾子函数 **/
-// const handlegetUserConfirmation = (msg, callback) => {
+// const handleGetUserConfirmation = (msg, callback) => {
 //
 //     /**
 //      * getUserConfirmation(msg: str, callback: bool);

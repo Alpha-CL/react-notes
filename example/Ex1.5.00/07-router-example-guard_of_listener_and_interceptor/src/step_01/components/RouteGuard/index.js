@@ -35,7 +35,7 @@ class RouteGuard extends PureComponent {
          *
          ** 运行时间点: 即将跳转到新页面时
          *
-         * @locatiion: 记录当前地址信息
+         * @location: 记录当前地址信息
          * @action: 表示进入该地址的方式
          *      * PoP           // 出栈
          *          - history.go();
@@ -76,7 +76,7 @@ class RouteGuard extends PureComponent {
         return (
 
             <React.Fragment>
-                <Router></Router>
+                <Router/>
                 {this.props.children}
             </React.Fragment>
         );

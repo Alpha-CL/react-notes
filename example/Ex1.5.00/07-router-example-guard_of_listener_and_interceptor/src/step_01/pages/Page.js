@@ -32,7 +32,7 @@ function Page(props) {
 
         <React.Fragment>
             <Router
-                getUserConfirmation={handlegetUserConfirmation}
+                getUserConfirmation={handleGetUserConfirmation}
             >
                 <div className="container">
                     <div className="nav">
@@ -67,7 +67,7 @@ const handleRouteGuard = (prevLocation, location, action, unListen) => {
 
 
 /** 仅当设置 this.props.history.block(msg); 后才会触发该勾子函数 **/
-const handlegetUserConfirmation = (msg, callback) => {
+const handleGetUserConfirmation = (msg, callback) => {
 
     /**
      * getUserConfirmation(msg: str, callback: bool);

@@ -12,10 +12,10 @@ import {urlConfig} from "./urlConfig";
 
 
 /**
- * Problem: 若父组件匹配的路径发生改变，则后代组件无法匹配后续页面( 目前匹配路径为 固定路径 /fixedpath/target )
+ * Problem: 若父组件匹配的路径发生改变，则后代组件无法匹配后续页面( 目前匹配路径为 固定路径 /fixedPath/target )
  *
  *
- ** 1) 利用 父组件匹配路径的参数( props.match.url ) 替换路径中的 "fixedpath"
+ ** 1) 利用 父组件匹配路径的参数( props.match.url ) 替换路径中的 "fixedPath"
  *
  *      props.match {
  *          ...
@@ -153,7 +153,6 @@ function ConMainOfPay(props) {
 
 
 export {
-
     ResolveOfImportUrlConfig
 };
 

@@ -98,6 +98,8 @@ function RouterLink(props) {
 
 function NavBarOfAnchor() {
 
+    // 需要重新刷新页面重新载入
+
     return (
 
         <ul className="nav-bar">

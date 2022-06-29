@@ -1,9 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-import React,{useState,useEffect,useReducer,useContext,useCallback,useMemo,useRef,useImperativeHandle,useLayoutEffect,useDebugValue} from "react";
-import PropTypes from "prop-types";
-import {HashRouter,BrowserRouter,Route,Switch} from "react-router-dom";
+import React from "react";
+import {BrowserRouter, HashRouter, Route, Switch} from "react-router-dom";
 
 
 //-------------------------------------------------------------------------------------------------------------------//
@@ -81,11 +80,11 @@ function CompC() {
 
     return (
         <React.Fragment>
-        <div>CompA: root/a</div>
-        <Route
-            path="/d"
-            component={CompD}
-        />
+            <div>CompA: root/a</div>
+            <Route
+                path="/d"
+                component={CompD}
+            />
         </React.Fragment>
     );
 }
@@ -155,7 +154,6 @@ function HashRouterExample(props) {
                     <Route
                         path="/a/c"
                         component={CompC}
-
                         exact               // 开启精确匹配，则只会匹配完整路径的组件
                     />
                 </BrowserRouter>
@@ -201,7 +199,7 @@ function HashRouterExample(props) {
             </div>
 
             <div className="page-section">
-                <h3>无论 Route 是否匹配成功，都会显示该组件的 children</h3>
+                <h3>无论 Route.path 是否匹配成功，都会显示该组件的 Route.children</h3>
                 <div>( 有且仅当 在 Switch 组件中时，若已匹配成功其他组件，则该组件无法被匹配 )</div>
                 <BrowserRouter>
                     <Route
@@ -216,7 +214,7 @@ function HashRouterExample(props) {
                         path="/b"
                         component={CompB}
                     >
-                        {()=>{
+                        {() => {
                             return (
                                 <h3 style={{color: "red"}}>
                                     若运行了该 Route 则必然会加载该 Route.children，并忽略该 Route.component
@@ -263,13 +261,9 @@ function HashRouterExample(props) {
     );
 }
 
-HashRouterExample.defaultProps = {
+HashRouterExample.defaultProps = {};
 
-};
-
-HashRouterExample.propTypes = {
-
-};
+HashRouterExample.propTypes = {};
 
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
