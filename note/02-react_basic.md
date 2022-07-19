@@ -13,6 +13,7 @@
  * 
  */
 
+
 1) Faceboook 起草的 JS 扩展语法
 
 2) JSX 本质上是一个 JS 对象，会被 babel 转译为 React.createElement();

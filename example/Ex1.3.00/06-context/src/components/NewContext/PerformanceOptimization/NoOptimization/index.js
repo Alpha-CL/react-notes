@@ -14,7 +14,7 @@ import React, {Component} from "react";
  *
  *      value: { changed }              // 内部比较原理: Object.is();
  *
- * > childrens <Context.Provider>
+ * > children <Context.Provider>
  *
  * * 会导致使用该 Context 的偶有后代元素强制重新渲染( 无论该后代元素是否有优化 "shouldComponentUpdate(): false;" )
  */
@@ -25,7 +25,7 @@ import React, {Component} from "react";
 
 /** New Context APi **/
 
-const ctx = React.createContext();
+const ctx = React.createContext({});
 
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//

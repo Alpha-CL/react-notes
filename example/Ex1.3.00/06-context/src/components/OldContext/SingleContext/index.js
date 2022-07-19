@@ -116,7 +116,6 @@ class SubChild extends Component {
 class SingleContext extends Component {
 
     /** 约束 context 中的数据类型 **/
-
     static childContextTypes = types;
 
     constructor(props) {
@@ -131,7 +130,6 @@ class SingleContext extends Component {
     }
 
     /** 获取 context 中的数据 **/
-
     getChildContext() {                 // 设置上下文的回调, 使用该组件时, 会在合适的时机( render() )调用该方法
                                         // 以便后代组件中获取该上下文数据
 

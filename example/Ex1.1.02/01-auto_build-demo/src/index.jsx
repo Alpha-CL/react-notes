@@ -18,8 +18,9 @@ import ReactDOM from "react-dom";
  * 每个 JSX 表达式，有且仅有一个根节点
  *
  *
- *
+ * <></> | <react.fragment></react.fragment> | <div></div> ...
  */
+
 
 const ele = (
     <React.Fragment>

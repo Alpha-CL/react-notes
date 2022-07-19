@@ -135,10 +135,10 @@ React 解决了 Model -> View 的问题
     * reducer: 处理器，用于根据action来处理数据，处理后的数据会被仓库重新保存
 
     + ------------ +                + ------------------ +              
-    |              |  1) dispatch   |                    |      1) dispatch:        分发 action
-    |    Action    | -------------> |       Store        |      2) transfer_action: 传递 action
-    |              |                |                    |      3) get_newData:     获取 newData
-    |              |                |  4) save_newData   |      4) save_newData:    存储 newData
+    |              |  1) dispatch   |                    |      1) dispatch:            分发 action
+    |    Action    | -------------> |       Store        |      2) transfer_action:     传递 action
+    |              |                |                    |      3) get_newData:         获取 newData
+    |              |                |  4) save_newData   |      4) save_newData:        存储 newData
     |              |                |                    |              
     + ------------ +                + ------------------ +
                                           /|\    |
@@ -200,7 +200,7 @@ React 解决了 Model -> View 的问题
  * Reducer
  *
  *
- * 1) "一个" 数据仓库，有切仅有 "一个" reducer
+ * 1) "一个" 数据仓库，有且仅有 "一个" reducer
  *    ( 通常情况，一个工程只有一个仓库，因此，一个系统，只有一个 reducer )
  *
  * 2) 为了方便管理，通常将 reducer 放在单独的文件中

@@ -49,20 +49,20 @@ React是由Facebook研发的、用于解决UI复杂度的开源JavaScript库，�
  */
 
 
-1) 轻量: React 的开发版所有源码( 包含注视 )仅 3000 行
+1) 轻量:              // React 的开发版所有源码( 包含注视 )仅 3000 行
 
-2) 原生: 所哟 React 的代码都是用 原生JS 书写而成，不依赖其他库( 仅依赖一两个轻量的库 )
+2) 原生:              // 所哟 React 的代码都是用 原生JS 书写而成，不依赖其他库( 仅依赖一两个轻量的库 )
 
-3) 易扩展: React 对代码的封装程度较低( 没有较多类似 Vue Megic )，所有 React 中很多功能都可以扩展
+3) 易扩展:            // React 对代码的封装程度较低( 没有较多类似 Vue Megic )，所有 React 中很多功能都可以扩展
 
-4) 不依赖宿主环境: React 仅依赖原生 JS语言，不依赖任何其他东西，包括运行环境
-                 因此可以轻易移植到 浏览器，桌面应用，移动端
+4) 不依赖宿主环境:     // React 仅依赖原生 JS语言，不依赖任何其他东西，包括运行环境
+                     // 因此可以轻易移植到 浏览器，桌面应用，移动端
 
-5) 渐进式: React 并非框架，对整个工程没有强制约束力，对于已存的工程，可以逐步重构
+5) 渐进式:            // React 并非框架，对整个工程没有强制约束力，对于已存的工程，可以逐步重构
 
-6) 单向数据流: 所有的数据自上而下流动
+6) 单向数据流:         // 所有的数据自上而下流动
 
-7) Redux: 使用 JS 声明洁面
+7) Redux:            // 使用 JS 声明洁面
 
 8) 组件化开发
 
@@ -86,7 +86,7 @@ React是由Facebook研发的、用于解决UI复杂度的开源JavaScript库，�
         
        √            √       性能        
         
-       √                    易上手	      
+       √                    易上手
         
                     √       灵活度
         
@@ -121,7 +121,7 @@ React是由Facebook研发的、用于解决UI复杂度的开源JavaScript库，�
 
 <!-- 依赖核心库，将核心功能与页面结合: 将虚拟DOM与页面结合 -->
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-****
+
 <!-- 若使用 JSX 语法，则需要用该扩展转译-->
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
@@ -143,7 +143,8 @@ React是由Facebook研发的、用于解决UI复杂度的开源JavaScript库，�
 
 /**
  * React.createElement(type: str, props: obj, ...children)
- *
+ * 
+ * 
  * @type: 指定标签类型
  * @props: 指定标签属性
  * @...children: 指定标签包含的子元素
@@ -153,9 +154,11 @@ React是由Facebook研发的、用于解决UI复杂度的开源JavaScript库，�
 //-------------------------------------------------------------------------------------------------------------------//
 
 
-/** react 原生:
-    利用 React.createElement(); 创建虚拟dom 
-    并利用 ReactDOM.render(); 插入指定元素内渲染 **/
+/** 
+    react 原生:
+    利用 React.createElement();   创建虚拟dom 
+    并利用 ReactDOM.render();     插入指定元素内渲染 
+**/
 
 <script type="text/javascript">
 

@@ -26,7 +26,7 @@ class TestSelect extends Component {
 
         this.state = {
 
-            datas:[],
+            datas: [],
             value: ''
         };
     }

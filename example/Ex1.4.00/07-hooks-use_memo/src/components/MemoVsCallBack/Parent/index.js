@@ -10,24 +10,24 @@ import {Child} from "../Child";
 
 
 /**
- * useCallBack(fn, diffArr): fnAddress;
+ * useCallBack(func, diffArr): fnAddress;
  *
  *
- * @fn: 指定函数
- * @diffArr: 依赖对比项数据
+ * @func:       指定函数
+ * @diffArr:    依赖对比项数据
  *
- ** return: 根据依赖项对比后返回相对稳定的函数地址，若依赖项未发生改变则不会改变函数地
+ ** return: 根据依赖项对比后返回相对稳定的函数地址，若依赖项未发生改变则不会改变函数地址
  */
 
 
 /**
- * useMemo(fn, diffArr): fnAddress;             // 用于保持需要经过高开销计算后才能获取的值
+ * useMemo(func, diffArr): fnAddress;             // 用于保持需要经过高开销计算后才能获取的值
  *
  *
- * @fn: 必须有返回值( 监测返回的任意数据 )
- * @diffArr: 依赖对比项数据
+ * @func:       必须有返回值( 监测返回的任意数据 )
+ * @diffArr:    依赖对比项数据
  *
- ** return: 依赖项根据 fn 的返回值对比，若依赖项未发生改变则
+ ** return: 依赖项根据 func 的返回值对比，若依赖项未发生改变则
  */
 
 

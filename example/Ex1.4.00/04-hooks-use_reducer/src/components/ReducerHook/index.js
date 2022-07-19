@@ -83,7 +83,7 @@ function ReducerHook(props) {
 
     const [n, dispatch] = useReducer(reducer, 0, (nextparam)=>{
 
-        /** nextparam: 第二个参数，返回结果会覆盖初始值( 第二个参数 ) **/
+        /** nextParam: 第二个参数，返回结果会覆盖初始值( 第二个参数 ) **/
         return nextparam + 1;
     });
 

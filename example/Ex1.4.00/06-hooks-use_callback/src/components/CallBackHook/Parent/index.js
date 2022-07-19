@@ -10,7 +10,7 @@ import {Child} from "../Child";
 
 
 /**
- * useCallBack(fu nc, diffArr): fnAddress;
+ * useCallBack(func, diffArr): fnAddress;
  *
  *
  * @func:       指定回调函数

@@ -66,7 +66,6 @@ class MovabelPanel extends Component {
 
 
 export {
-
     MovabelPanel
 };
 

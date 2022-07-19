@@ -20,8 +20,8 @@ import React, {Component} from "react";
 
 /** New Context APi **/
 
-const ctx1 = React.createContext();
-const ctx2 = React.createContext();
+const ctx1 = React.createContext({});
+const ctx2 = React.createContext({});
 
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -//
@@ -131,7 +131,7 @@ class SubChild extends Component {
 
 /** create context **/
 
-class MultiComsumer extends Component {
+class MultiConsumer extends Component {
 
     static propTypes = {};
 
@@ -185,7 +185,7 @@ class MultiComsumer extends Component {
 
 export {
 
-    MultiComsumer
+    MultiConsumer
 };
 
 

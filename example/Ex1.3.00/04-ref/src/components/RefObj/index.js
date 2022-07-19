@@ -33,10 +33,10 @@ class RefObj extends Component {
 
     handleClick = () => {
 
-        console.log(this.refs);                 // 使用 ref: obj; 后 this.refs 废弃
+        console.log('this.refs: ', this.refs);                 // 使用 ref: obj; 后 this.refs 废弃
 
-        console.log(this.refObj);
-        console.log(this.refObj.current);       // 获取目标元素( ReactDom | ReactClassComp )
+        console.log('this.refObj: ', this.refObj);
+        console.log('this.refObj.current: ', this.refObj.current);       // 获取目标元素( ReactDom | ReactClassComp )
 
     };
 

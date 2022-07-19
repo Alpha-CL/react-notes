@@ -8,7 +8,7 @@ import React, {Component} from "react";
 
 
 /**
- * Provider                 // Creater
+ * Provider                 // Creator
  *
  *
  * 创建一个组件上下文( context )

@@ -17,7 +17,7 @@ class ErrBound01 extends PureComponent {
      * getDerivedStateFromError();          // 静态函数
      *
      *
-     * 运行时间: 渲染子组件
+     * 运行时间: 渲染子组件过程中, 发生错误之后，更新页面之前触发
      *
      ** 仅在 "子组件" 发生错误时触发该函数
      */

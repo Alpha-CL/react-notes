@@ -59,7 +59,7 @@ class DataFlow extends Component {
         return (
 
             <ctx.Provider
-                value={{                            // used valuee
+                value={{                            // used value
                     name: 'omega',
                     age: 16
                 }}

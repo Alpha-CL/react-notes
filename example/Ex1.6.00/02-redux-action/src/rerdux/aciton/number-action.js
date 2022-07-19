@@ -18,7 +18,6 @@ const numberActions = {
 function getIncreaseAction() {
 
     return {
-
         type: actionTypes.INCREASE
     }
 }

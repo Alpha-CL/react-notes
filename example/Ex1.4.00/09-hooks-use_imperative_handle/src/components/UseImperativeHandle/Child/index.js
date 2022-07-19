@@ -8,12 +8,12 @@ import React, {PureComponent,useImperativeHandle} from "react";
 
 
 /**
- * useImperativeHandle(ref, fn, diffArr);
+ * useImperativeHandle(ref, func, diffArr);
  *
  *
- * @ref: 外部传入的 ref
- * @fn: 该函数的返回值 会覆盖 ref.current
- * @diffArr: 依赖项( 若使用该依赖项，第一次调用后，会进行缓存，仅依赖项发生变化时才会发生重新渲染 )
+ * @ref:        外部传入的 ref
+ * @func:       该函数的返回值 会覆盖 ref.current
+ * @diffArr:    依赖项( 若使用该依赖项，第一次调用后，会进行缓存，仅依赖项发生变化时才会发生重新渲染 )
  */
 
 

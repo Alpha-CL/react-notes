@@ -32,7 +32,7 @@ class ChildContext extends Component {
 
     static contextTypes = types;
 
-    /** 必要条件:  约束 context 中的数据类型 **/
+    /** 必要条件: 约束 context 中的数据类型 **/
 
     static childContextTypes = types;
 
