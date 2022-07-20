@@ -1,11 +1,11 @@
-
+import classComp from "./pages/classComp/index"
 
 function App() {
-  return (
-    <div className="App">
-      hello world
-    </div>
-  );
+	return (
+		<div className="App">
+			<classComp/>
+		</div>
+	);
 }
 
 export default App;
